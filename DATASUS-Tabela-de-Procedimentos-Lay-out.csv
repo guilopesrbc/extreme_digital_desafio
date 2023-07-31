@@ -1,0 +1,293 @@
+"TB_GRUPO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_GRUPO","2","1","2","VARCHAR","Código do grupo dos procedimentos.",""
+"NO_GRUPO","100","3","102","VARCHAR","Nome do grupo dos procedimentos",""
+"DT_COMPETENCIA","6","103","108","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_SUB_GRUPO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_GRUPO","2","1","2","VARCHAR","Código do grupo dos procedimentos.",""
+"CO_SUB_GRUPO","2","3","4","VARCHAR","Código do sub-grupo dos procedimentos.",""
+"NO_SUB_GRUPO","100","5","104","VARCHAR","Nome do sub-grupo dos procedimentos",""
+"DT_COMPETENCIA","6","105","110","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_FORMA_ORGANIZACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_GRUPO","2","1","2","VARCHAR","Código do grupo dos procedimentos.",""
+"CO_SUB_GRUPO","2","3","4","VARCHAR","Código do sub-grupo dos procedimentos.",""
+"CO_FORMA_ORGANIZACAO","2","5","6","VARCHAR","Código da forma de organização dos procedimentos.",""
+"NO_FORMA_ORGANIZACAO","100","7","106","VARCHAR","Nome da forma de organização dos procedimentos",""
+"DT_COMPETENCIA","6","107","112","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_PROCEDIMENTO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"NO_PROCEDIMENTO","250","11","260","VARCHAR","Nome descritivo do procedimento",""
+"TP_COMPLEXIDADE","1","261","261","VARCHAR","Define a complexidade do procedimento.","0 - Não se aplica
+1 - Atenção Básica Complexidade
+2 - Média Complexidade
+3 - Alta Complexidade"
+"TP_SEXO","1","262","262","VARCHAR","Define a abrangência de sexo para a aplicação do procedimento.","M - Masculino
+F - Feminino
+I - Indiferente/Ambos
+N - Não se aplica"
+"QT_MAXIMA_EXECUCAO","4","263","266","NUMBER","Número máximo de execuções permitidas.","9999 se não se aplica"
+"QT_DIAS_PERMANENCIA","4","267","270","NUMBER","Número máximo de dias de internações possíveis.","9999 se não se aplica"
+"QT_PONTOS","4","271","274","NUMBER","Quantidade de pontos para o procedimento.","9999 se não se aplica"
+"VL_IDADE_MINIMA","4","275","278","NUMBER","Idade mínima para o uso um procedimento em meses.","De 0000 a 1331 meses. 9999 se não se aplica."
+"VL_IDADE_MAXIMA","4","279","282","NUMBER","Idade máxima para o uso um procedimento em meses.","De 0000 a 1331 meses. 9999 se não se aplica."
+"VL_SH","10","283","292","NUMBER","Valor pago para o serviço hospitalar deste procedimento.","Numero (8,2)"
+"VL_SA","10","293","302","NUMBER","Valor pago para o serviço ambulatorial deste procedimento.","Numero (8,2)"
+"VL_SP","10","303","312","NUMBER","Valor pago para o serviço profissional deste procedimento.","Numero (8,2)"
+"CO_FINANCIAMENTO","2","313","314","VARCHAR","Código que identifica os tipos de financiamento de um procedimento.",""
+"CO_RUBRICA","6","315","320","VARCHAR","Código que identifica as rubricas.",""
+"DT_COMPETENCIA","6","321","326","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_FINANCIAMENTO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_FINANCIAMENTO","2","1","2","VARCHAR","Código que identifica os tipos de financiamento de um procedimento.",""
+"NO_FINANCIAMENTO","100","3","102","VARCHAR","Nome que descreve os tipos de financiamento de um procedimento.","01 - Atenção Básica (PAB)
+02 - Média e Alta complecidade (MAC)
+03 - Fundo de Ações Estratégicas e Compensações (FAEC)
+04 - Viligância em Saúde
+05 - Assistência Farmacêutica
+06 - Assistência Farmacêutica e MAC
+07 - Incentivo MAC"
+"DT_COMPETENCIA","6","103","108","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_COMPATIVEL","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO_PRINCIPAL","10","1","10","VARCHAR","Código do procedimento base da compatibilidade.",""
+"CO_REGISTRO_PRINCIPAL","2","11","12","VARCHAR","Código do instrumento de registro do procedimento base da compatibilidade..",""
+"CO_PROCEDIMENTO_COMPATIVEL","10","13","22","VARCHAR","Código do procedimento a ser relacionado com o procedimento base para compatibilidade.",""
+"CO_REGISTRO_COMPATIVEL","2","23","24","VARCHAR","Código do instrumento de registro do procedimento a ser relacionado com o procedimento base para compatibilidade.",""
+"TP_COMPATIBILIDADE","1","25","25","VARCHAR","Código que identifica as possíveis compatibilidades entre procedimentos por forma de registro.","1 - Compatível
+2 - Incompatível / Excludente
+3 - Concomitante"
+"QT_PERMITIDA","4","26","29","NUMBER","Identifica a quantidade máxima possível de realização de um procedimentos.",""
+"DT_COMPETENCIA","6","30","35","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_EXCECAO_COMPATIBILIDADE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO_RESTRICAO","10","1","10","VARCHAR","Código do procedimento nega a Compatibilidade definida para o para abaixo.",""
+"CO_PROCEDIMENTO_PRINCIPAL","10","11","20","VARCHAR","Código do procedimento que informa o procedimento principal da restrição.",""
+"CO_REGISTRO_PRINCIPAL","2","21","22","VARCHAR","Código do instrumento de registro do procedimento base da compatibilidade..",""
+"CO_PROCEDIMENTO_COMPATIVEL","10","23","32","VARCHAR","Código do procedimento que informa o procedimento secundário da restrição.",""
+"CO_REGISTRO_COMPATIVEL","2","33","34","VARCHAR","Código do instrumento de registro do procedimento a ser relacionado com o procedimento base para compatibilidade.",""
+"TP_COMPATIBILIDADE","1","35","35","VARCHAR","Código que identifica as possíveis compatibilidades entre procedimentos por forma de registro.","1 - Compatível
+2 - Incompatível / Excludente
+3 - Concomitante"
+"DT_COMPETENCIA","6","36","41","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_CID","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_CID","4","1","4","VARCHAR","Código que identifica o CID-10.",""
+"NO_CID","100","5","104","VARCHAR","Nome da doença.",""
+"TP_AGRAVO","1","105","105","VARCHAR","Define o tipo de agravo que deve ser notificado.","0 - Sem Agravo
+1 - Agravo de notificação
+2 - Agravo de bloqueio"
+"TP_SEXO","1","106","106","VARCHAR","Define a abrangência de sexo para a aplicação do procedimento.","M - Masculino
+F - Feminino
+I - Indiferente/Ambos"
+"TP_ESTADIO","1","107","107","VARCHAR","Diz se o cid é ou não estadiável","S - Sim N – Não"
+"VL_CAMPOS_IRRADIADOS","4","108","111","NUMBER","Quantidade de campos irradiados",""
+"","","","","","",""
+"RL_PROCEDIMENTO_CID","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_CID","4","11","14","VARCHAR","Código que identifica o CID-10.",""
+"ST_PRINCIPAL","1","15","15","VARCHAR","Define se este CID pode ser principal para a solicitação deste procedimento","S - Sim
+N - Não"
+"DT_COMPETENCIA","6","16","21","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_DETALHE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_DETALHE","3","1","3","VARCHAR","Código que identifica os atributos de detalhes de um procedimento",""
+"NO_DETALHE","100","4","103","VARCHAR","Nome que descreve os atributos de detalhes de um procedimento.",""
+"DT_COMPETENCIA","6","104","109","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_DETALHE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_DETALHE","3","11","13","VARCHAR","Código que identifica os atributos de detalhes de um procedimento",""
+"DT_COMPETENCIA","6","14","19","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_HABILITACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_HABILITACAO","4","1","4","VARCHAR","Código que identifica uma habilitação para o CNES.",""
+"NO_HABILITACAO","150","5","154","VARCHAR","Nome de uma habilitação.",""
+"DT_COMPETENCIA","6","155","160","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_GRUPO_HABILITACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"NU_GRUPO_HABILITACAO","4","1","4","VARCHAR","Código do grupo de habilitação",""
+"NO_GRUPO_HABILITACAO","20","5","24","VARCHAR","Nome (curto) do grupo de habilitação",""
+"DS_GRUPO_HABILITACAO","25","25","274","VARCHAR","Descrição (longa) do grupo de habilitação",""
+"","","","","","",""
+"RL_PROCEDIMENTO_HABILITACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_HABILITACAO","4","11","14","VARCHAR","Código que identifica uma habilitação para o CNES.",""
+"NU_GRUPO_HABILITACAO","4","15","18","VARCHAR","Identifica um grupo de habilitações requeridas para executar um dado procedimento ",""
+"DT_COMPETENCIA","6","19","24","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_INCREMENTO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_HABILITACAO","4","11","14","VARCHAR","Código que identifica uma habilitação para o CNES.",""
+"VL_PERCENTUAL_SH","7","15","21","NUMBER","Valor percentual de incremento para o Serviço Hospitalar de um procedimento vinculado a uma dada Habilitação.","Número (5,2)"
+"VL_PERCENTUAL_SA","7","22","28","NUMBER","Valor percentual de incremento para o Serviço Ambulatorial de um procedimento vinculado a uma dada Habilitação.","Número (5,2)"
+"VL_PERCENTUAL_SP","7","29","35","NUMBER","Valor percentual de incremento para o Serviço Profissional de um procedimento vinculado a uma dada Habilitação.","Número (5,2)"
+"DT_COMPETENCIA","6","36","41","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_TIPO_LEITO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_TIPO_LEITO","2","1","2","VARCHAR","Código da classificação de leito",""
+"NO_TIPO_LEITO","60","3","62","VARCHAR","Nome da classificação de leito.","01 - Cirúrgico                                  
+02 - Obstétricos                                
+03 - Clínico                                    
+04 - Crônicos                                   
+05 - Psiquiatria                                
+06 - Pneumologia Sanitária (Tisiologia)         
+07 - Pediátricos                                
+08 - Reabilitação                               
+09 - Leito Dia / Cirúrgicos                     
+10 - Leito Dia / Aids                           
+11 - Leito Dia / Fibrose Cística                
+12 - Leito Dia / Intercorrência Pós-Transplante 
+13 - Leito Dia / Geriatria                      
+14 - Leito Dia / Saúde Mental                   
+64 - Unidade Intermediária                      
+65 - Unidade Intermediária Neonatal             
+74 - UTI I                                      
+75 - UTI Adulto II                              
+76 - UTI Adulto III                             
+77 - UTI Infantil I                             
+78 - UTI Infantil II                            
+79 - UTI Infantil III                           
+80 - UTI Neonatal I                             
+81 - UTI Neonatal II                            
+82 - UTI Neonatal III                           
+83 - UTI Queimados                              
+"
+"DT_COMPETENCIA","6","63","68","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_LEITO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_TIPO_LEITO","2","11","12","VARCHAR","Código da classificação de leito",""
+"DT_COMPETENCIA","6","13","18","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_MODALIDADE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_MODALIDADE","2","1","2","VARCHAR","Código que identifica as modalidades de atendimentos.",""
+"NO_MODALIDADE","100","3","102","VARCHAR","Nome que descreve as modalidades de atendimentos possíveis para um procedimento.","Ambulatorial
+Hospitalar
+Hospital-Dia
+Assistência Domiciliar
+Internação Domiciliar"
+"DT_COMPETENCIA","6","103","108","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_MODALIDADE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_MODALIDADE","2","11","12","VARCHAR","Código que identifica as modalidades de atendimentos.",""
+"DT_COMPETENCIA","6","13","18","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_REGISTRO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","",""
+"CO_REGISTRO","2","1","2","VARCHAR","Código do instrumento de registro do procedimento.",""
+"NO_REGISTRO","50","3","52","VARCHAR","Nome do instrumento de registro do procedimento.","BPA (CONSOLIDADO)
+BPA (INDIVIDUALIZADO)
+APAC (PROCEDIMENTO PRINCIPAL) 
+APAC (PROCEDIMENTO SECUNDARIO) 
+AIH (PROCEDIMENTO PRINCIPAL) 
+AIH (PROCEDIMENTO SECUNDARIO) 
+AIH (ESPECIAL)"
+"DT_COMPETENCIA","6","53","58","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_REGISTRO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_REGISTRO","2","11","12","VARCHAR","Código do instrumento de registro do procedimento.",""
+"DT_COMPETENCIA","6","13","18","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_SERVICO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_SERVICO","3","1","3","VARCHAR","Código que identifica os serviços.",""
+"NO_SERVICO","120","4","123","VARCHAR","Nome que descreve os serviços.",""
+"DT_COMPETENCIA","6","124","129","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_SERVICO_CLASSIFICACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_SERVICO","3","1","3","VARCHAR","Código que identifica os serviços.",""
+"CO_CLASSIFICACAO","3","4","6","VARCHAR","Código que identifica a classificação de um serviço.",""
+"NO_CLASSIFICACAO","150","7","156","VARCHAR","Nome que descreve a classificação de um serviço.",""
+"DT_COMPETENCIA","6","157","162","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"RL_PROCEDIMENTO_SERVICO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_SERVICO","3","11","13","VARCHAR","Código que identifica os serviços.",""
+"CO_CLASSIFICACAO","3","14","16","VARCHAR","Código que identifica a classificação de um serviço.",""
+"DT_COMPETENCIA","6","17","22","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_OCUPACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_OCUPACAO","6","1","6","VARCHAR","Código que identifica a classificação das ocupações definidas pela CBO-2002",""
+"NO_OCUPACAO","150","7","156","VARCHAR","Nome das ocupações definidas pela CBO-2002",""
+"","","","","","",""
+"RL_PROCEDIMENTO_OCUPACAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_OCUPACAO","6","11","16","VARCHAR","Código que identifica a classificação das ocupações definidas pela CBO-2002",""
+"DT_COMPETENCIA","6","17","22","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_RUBRICA","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_RUBRICA","6","1","6","VARCHAR","Código que identifica as rubricas. As duas primeiras posições identifica o código de financiamento.",""
+"NO_RUBRICA","100","7","106","VARCHAR","Nome das rubricas.",""
+"DT_COMPETENCIA","6","107","112","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_SIA_SIH","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO_SIA_SIH","10","1","10","VARCHAR","Código que identifica os procedimento do SAI e SIH na data de vigência da nova tabela.",""
+"NO_PROCEDIMENTO_SIA_SIH","100","11","110","VARCHAR","Nome dos procedimento do SAI e SIH na data de vigência da nova tabela.",""
+"TP_PROCEDIMENTO","1","111","111","VARCHAR","Define qual era o tipo do procedimento SAI e/ou SIH de origem do novo procedimento.","A - Ambulatorial
+H - Hospitalar"
+"","","","","","",""
+"RL_PROCEDIMENTO_SIA_SIH","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_PROCEDIMENTO_SIA_SIH","10","11","20","VARCHAR","Código que identifica o procedimento do SAI e SIH que deu origem ao novo procedimento da tabela unificada.",""
+"TP_PROCEDIMENTO","1","21","21","VARCHAR","Define qual era o tipo do procedimento SAI e/ou SIH de origem do novo procedimento.","A - Ambulatorial
+H - Hospitalar"
+"","","","","","",""
+"RL_PROCEDIMENTO_ORIGEM","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento",""
+"CO_PROCEDIMENTO_ORIGEM","10","11","20","VARCHAR","Código que identifica o procedimento que deu origem ao novo procedimento da tabela unificada.",""
+"DT_COMPETENCIA","6","21","26","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_DESCRICAO","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento.",""
+"DS_PROCEDIMENTO","4000","11","4010","VARCHAR","Descrição do procedimento",""
+"DT_COMPETENCIA","6","4011","4016","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_DESCRICAO_DETALHE","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_DETALHE","3","1","3","VARCHAR","Código do detalhe.",""
+"DS_DETALHE","4000","4","4003","VARCHAR","Descrição do detalhe",""
+"DT_COMPETENCIA","6","4004","4009","VARCHAR","Data que informa a competência de validade deste registro.","YYYYMM"
+"","","","","","",""
+"TB_REGRA_CONDICIONADA","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_REGRA_CONDICIONADA","4","1","4","VARCHAR","Código da regra condicionada",""
+"NO_REGRA_CONDICIONADA","150","5","154","VARCHAR","Nome da regra condicionada",""
+"DS_REGRA_CONDICIONADA","4000","155","4154","VARCHAR","Descrição da regra condicionada",""
+"","","","","","",""
+"RL_PROCEDIMENTO_REGRA_COND","","","","","",""
+"Coluna","Tamanho","Inicio","Fim","Tipo","Descrição","Preenchimento"
+"CO_PROCEDIMENTO","10","1","10","VARCHAR","Código do procedimento.",""
+"CO_REGRA_CONDICIONADA","4","11","14","VARCHAR","Código da regra condicionada",""
